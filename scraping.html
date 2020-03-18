@@ -77,9 +77,32 @@
         <section id="home" class="home text-right">
             <div class="overlay">
             </div>
-        </section>
+        </section><div class="col-md-12 text-center mt-3" style="color: #F05526;">
+            <h2><b>Data Scraping</b></h2>
+        </div>
 
-        <h2>Nanti Scrapingnya disini</h2>
+        <div class="col-md-12 text-center mt-3" style="color: #F05526;">
+            <h2><b>Guitar Products</b></h2>
+        </div>
+        <br>
+        <div class="row">
+            <div class="container">
+                <div class="table-responsive-sm">
+                    <table class="table table-sm table-bordered" id="table">
+                        <caption>Republika Online</caption>
+                        <thead>
+                            <tr class="table-primary">
+                                <th scope="col">No</th>
+                                <th scope="col">Nama Barang</th>
+                                <th scope="col">Harga</th>
+                                <th scope="col">Harga Setelah Discount</th>
+                                <th scope="col">Gambar</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
 
         <section id="footer_widget" class="footer_widget">
             <div class="container">
@@ -158,7 +181,23 @@
 
         <script src="assets/js/vendor/jquery-1.11.2.min.js"></script>
         <script src="assets/js/vendor/bootstrap.min.js"></script>
-
+        <script src="jquery-2.1.4.min.js"></script>
+        <script>
+        $(document).ready(function(){
+            $.getJSON("ScrapingFantasticFive.json", function(data){
+                var datagitar = '';
+                $.each(data, function(key, value){
+                    datagitar += '<tr>';
+                    datagitar += '<td>'+(key+1)+'</td>';
+                    datagitar += '<td>'+value.Name+'</td>';
+                    datagitar += '<td>'+value.ListPrice+'</td>';
+                    datagitar += '<td>'+value.Price+'</td>';
+                    datagitar += '<td>'+value.ImageUrl+'</td>';
+                });
+                $('#table').append(datagitar);
+            });
+        });
+        </script>
         <script src="assets/js/jquery.easypiechart.min.js"></script>
         <script src="assets/js/portfolio.jquery.js"></script>
         <script src="assets/js/jquery.mixitup.min.js"></script>
