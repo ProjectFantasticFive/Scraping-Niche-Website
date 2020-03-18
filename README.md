@@ -1,6 +1,6 @@
 # Scraping-Niche-Website
 
-*Task 6.4 Develop Website Hasil Scraping (Team)
+Task 6.4 Develop Website Hasil Scraping (Team)
 
 
 Merupakan website untuk pemenuhan tugas mata kuliah proyek 1 dengan materi web scraping.
