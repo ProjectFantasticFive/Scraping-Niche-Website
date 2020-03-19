@@ -86,7 +86,7 @@
             <div class="container">
                 <div class="table-responsive-sm">
                     <table class="table table-sm table-bordered" id="table">
-                        <caption><center>Nuansa Musik & Blibli</center></caption>
+                        <caption><center>Guitar From Nuansa Musik</center></caption>
                         <thead>
                             <tr class="table-primary">
                                 <th scope="col"><center>No</center></th>
@@ -100,17 +100,17 @@
                 </div>
             </div>
         </div>
+        <br>
         <div class="row">
             <div class="container">
                 <div class="table-responsive-sm">
-                    <table class="table table-sm table-bordered" id="table">
-                        <caption><center>Nuansa Musik & Blibli</center></caption>
+                    <table class="table table-sm table-bordered" id="table2">
+                        <caption><center>Guitar From Blibli</center></caption>
                         <thead>
                             <tr class="table-primary">
                                 <th scope="col"><center>No</center></th>
                                 <th scope="col"><center>Nama Barang</center></th>
-                                <th scope="col"><center>Harga</center></th>
-                                <th scope="col"><center>Harga Setelah Discount</center></th>
+                                <th scope="col"><center>Harga</center></th> 
                                 <th scope="col"><center>Gambar</center></th>
                             </tr>
                         </thead>
@@ -118,7 +118,6 @@
                 </div>
             </div>
         </div>
-
 
         <section id="footer_widget" class="footer_widget">
             <div class="container">
@@ -189,17 +188,32 @@
         <script src="jquery-2.1.4.min.js"></script>
         <script>
         $(document).ready(function(){
-            $.getJSON("ScrapingFantasticFive.json", function(data){
+            $.getJSON("NuansaMusik.json", function(data){
                 var datagitar = '';
                 $.each(data, function(key, value){
                     datagitar += '<tr>';
                     datagitar += '<td>'+(key+1)+'</td>';
                     datagitar += '<td>'+value.Name+'</td>';
-                   	datagitar += '<td>'+value.ListPrice+'</td>';
+                      datagitar += '<td>'+value["ListPrice"]+'</td>';
                     datagitar += '<td>'+value.Price+'</td>';
-                    datagitar += '<td>'+value.ImageUrl+'</td>';
+                    datagitar += '<td>'+value["Image Url"]+'</td>';
                 });
                 $('#table').append(datagitar);
+            });
+        });
+        </script>
+        <script>
+        $(document).ready(function(){
+            $.getJSON("Blibli.json", function(data){
+                var datagitar = '';
+                $.each(data, function(key, value){
+                    datagitar += '<tr>';
+                    datagitar += '<td>'+(key+1)+'</td>';
+                    datagitar += '<td>'+value.Name+'</td>';
+                    datagitar += '<td>'+value.Harga+'</td>';
+                    datagitar += '<td>'+value.Brand_img+'</td>';
+                });
+                $('#table2').append(datagitar);
             });
         });
         </script>
