@@ -198,15 +198,15 @@
                 $('#table').append(datagitar);
             });
             $.getJSON("Blibli.json", function(data){
-                var datagitar2 = '';
+                var datagitar = '';
                 $.each(data, function(key, value){
-                    datagitar2 += '<tr>';
-                    datagitar2 += '<td>'+(key+1)+'</td>';
-                    datagitar2 += '<td>'+value.Name+'</td>';
-                    datagitar2 += '<td>'+value.Harga+'</td>';
-                    datagitar2 += "<td><img src='"+value["Brand_img"]+"'></td>";
+                    datagitar += '<tr>';
+                    datagitar += '<td>'+(key+1)+'</td>';
+                    datagitar += '<td>'+value.Name+'</td>';
+                    datagitar += '<td>'+value.Harga+'</td>';
+                    datagitar += "<td><img src='"+value["Brand_img"]+"'></td>";
                 });
-                $('#table2').append(datagitar2);
+                $('#table2').append(datagitar);
             });
         });
         </script>
