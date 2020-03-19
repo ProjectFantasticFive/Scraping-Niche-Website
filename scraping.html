@@ -195,7 +195,7 @@
                     datagitar += '<td>'+value.Name+'</td>';
                       datagitar += '<td>'+value["ListPrice"]+'</td>';
                     datagitar += '<td>'+value.Price+'</td>';
-                    datagitar += '<td>'+value["Image Url"]+'</td>'<img src="Image Url.jpg">;
+                    datagitar += "<td><img src='"+value["Image Url"]+"'></td>";
                 });
                 $('#table').append(datagitar);
             });
@@ -210,7 +210,7 @@
                     datagitar += '<td>'+(key+1)+'</td>';
                     datagitar += '<td>'+value.Name+'</td>';
                     datagitar += '<td>'+value.Harga+'</td>';
-                    datagitar += '<td>'+value["Brand_img"]+'</td>';
+                    datagitar += "<td><img src='"+value["Brand_img"]+"'></td>";
                 });
                 $('#table2').append(datagitar);
             });
