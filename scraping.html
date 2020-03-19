@@ -192,13 +192,11 @@
                     datagitar += '<tr>';
                     datagitar += '<td>'+(key+1)+'</td>';
                     datagitar += '<td>'+value.Name+'</td>';
-                    //  datagitar += '<td>'+value["ListPrice"]+'</td>';
                     datagitar += '<td>'+value.Price+'</td>';
                     datagitar += "<td><img src='"+value["Image Url"]+"'></td>";
                 });
                 $('#table').append(datagitar);
             });
-        });
             $.getJSON("Blibli.json", function(data){
                 var datagitar2 = '';
                 $.each(data, function(key, value){
@@ -210,6 +208,7 @@
                 });
                 $('#table2').append(datagitar);
             });
+        });
         </script>
         <script src="assets/js/jquery.easypiechart.min.js"></script>
         <script src="assets/js/portfolio.jquery.js"></script>
