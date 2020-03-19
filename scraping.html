@@ -185,7 +185,7 @@
         <script src="assets/js/vendor/bootstrap.min.js"></script>
         <script src="jquery-2.1.4.min.js"></script>
         <script>
-        $(document).ready(function(){
+        $when((document).ready(function(){
             $.getJSON("NuansaMusik.json", function(data){
                 var datagitar = '';
                 $.each(data, function(key, value){
@@ -196,7 +196,7 @@
                     datagitar += "<td><img src='"+value["Image Url"]+"'></td>";
                 });
                 $('#table').append(datagitar);
-            });
+            })).then(function(){}
             $.getJSON("Blibli.json", function(data){
                 var datagitar2 = '';
                 $.each(data, function(key, value){
@@ -208,7 +208,7 @@
                 });
                 $('#table2').append(datagitar);
             });
-        });
+        }));
         </script>
         <script src="assets/js/jquery.easypiechart.min.js"></script>
         <script src="assets/js/portfolio.jquery.js"></script>
