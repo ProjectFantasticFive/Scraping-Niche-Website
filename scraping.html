@@ -91,7 +91,6 @@
                                 <th scope="col"><center>No</center></th>
                                 <th scope="col"><center>Nama Barang</center></th>
                                 <th scope="col"><center>Harga</center></th>
-                                <th scope="col"><center>Harga Setelah Discount</center></th>
                                 <th scope="col"><center>Gambar</center></th>
                             </tr>
                         </thead>
@@ -193,7 +192,7 @@
                     datagitar += '<tr>';
                     datagitar += '<td>'+(key+1)+'</td>';
                     datagitar += '<td>'+value.Name+'</td>';
-                      datagitar += '<td>'+value["ListPrice"]+'</td>';
+                    //  datagitar += '<td>'+value["ListPrice"]+'</td>';
                     datagitar += '<td>'+value.Price+'</td>';
                     datagitar += "<td><img src='"+value["Image Url"]+"'></td>";
                 });
@@ -201,18 +200,19 @@
             });
         });
         </script>
+        <script src="jquery-2.1.4.min.js"></script>
         <script>
         $(document).ready(function(){
             $.getJSON("Blibli.json", function(data){
-                var datagitar = '';
+                var datagitar2 = '';
                 $.each(data, function(key, value){
-                    datagitar += '<tr>';
-                    datagitar += '<td>'+(key+1)+'</td>';
-                    datagitar += '<td>'+value.Name+'</td>';
-                    datagitar += '<td>'+value.Harga+'</td>';
-                    datagitar += "<td><img src='"+value["Brand_img"]+"'></td>";
+                    datagitar2 += '<tr>';
+                    datagitar2 += '<td>'+(key+1)+'</td>';
+                    datagitar2 += '<td>'+value.Name+'</td>';
+                    datagitar2 += '<td>'+value.Harga+'</td>';
+                    datagitar2 += "<td><img src='"+value["Brand_img"]+"'></td>";
                 });
-                $('#table2').append(datagitar);
+                $('#table2').append(datagitar2);
             });
         });
         </script>
