@@ -82,7 +82,6 @@
         <div class="col-md-12 text-center mt-3" style="color: #1C477F;">
             <h2><b>Guitar Products</b></h2>
         </div>
-        <br>
         <div class="row">
             <div class="container">
                 <div class="table-responsive-sm">
@@ -101,6 +100,25 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="container">
+                <div class="table-responsive-sm">
+                    <table class="table table-sm table-bordered" id="table">
+                        <caption><center>Nuansa Musik & Bukalapak</center></caption>
+                        <thead>
+                            <tr class="table-primary">
+                                <th scope="col"><center>No</center></th>
+                                <th scope="col"><center>Nama Barang</center></th>
+                                <th scope="col"><center>Harga</center></th>
+                                <th scope="col"><center>Harga Setelah Discount</center></th>
+                                <th scope="col"><center>Gambar</center></th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+
 
         <section id="footer_widget" class="footer_widget">
             <div class="container">
@@ -177,9 +195,9 @@
                     datagitar += '<tr>';
                     datagitar += '<td>'+(key+1)+'</td>';
                     datagitar += '<td>'+value.Name+'</td>';
-                   	datagitar += '<td>'+value.["List Price"]+'</td>';
+                   	datagitar += '<td>'+value.ListPrice+'</td>';
                     datagitar += '<td>'+value.Price+'</td>';
-                    datagitar += '<td>'+value.["Image Url"]+'</td>';
+                    datagitar += '<td>'+value.ImageUrl+'</td>';
                 });
                 $('#table').append(datagitar);
             });
