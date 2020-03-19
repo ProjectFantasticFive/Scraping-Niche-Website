@@ -199,10 +199,6 @@
                 $('#table').append(datagitar);
             });
         });
-        </script>
-        <script src="jquery-2.1.4.min.js"></script>
-        <script>
-        $(document).ready(function(){
             $.getJSON("Blibli.json", function(data){
                 var datagitar2 = '';
                 $.each(data, function(key, value){
@@ -212,9 +208,8 @@
                     datagitar2 += '<td>'+value.Harga+'</td>';
                     datagitar2 += "<td><img src='"+value["Brand_img"]+"'></td>";
                 });
-                $('#table2').append(datagitar2);
+                $('#table2').append(datagitar);
             });
-        });
         </script>
         <script src="assets/js/jquery.easypiechart.min.js"></script>
         <script src="assets/js/portfolio.jquery.js"></script>
